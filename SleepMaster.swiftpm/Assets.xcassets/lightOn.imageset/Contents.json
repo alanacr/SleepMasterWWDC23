@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "Ilustração_Sem_Título 38 1.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "Ilustração_Sem_Título 38 1@2x.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "Ilustração_Sem_Título 38 1@3x.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
