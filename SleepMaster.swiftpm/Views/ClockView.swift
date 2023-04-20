@@ -4,7 +4,6 @@
 //
 //  Created by acrn on 18/04/23.
 //
-//
 
 import SwiftUI
 
@@ -13,11 +12,16 @@ struct ClockView: View {
         
         ZStack {
             Image("backgroundMain")
-                .ignoresSafeArea()
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea(.all)
             
             VStack {
+                Spacer()
                 Image ("clock")
-                    .padding(80)
+                    .padding()
+                    .frame(width: 513, height: 462)
+                Spacer()
                 
                 HStack{
                     CardMainType(cardType: .clock)

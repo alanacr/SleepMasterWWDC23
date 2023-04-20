@@ -4,18 +4,26 @@
 //
 //  Created by acrn on 19/04/23.
 //
+//
+
 
 import SwiftUI
 
 struct DayInfoView: View {
+    
     var body: some View {
         
         ZStack {
             Image("backgroundMain")
-                .ignoresSafeArea()
-
-            VStack{
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea(.all)
+            
+            VStack {
+                Spacer()
                 Image("imageDay")
+                    .padding()
+                    .frame(width: 513, height: 462)
                 Spacer()
                 
                 HStack{
@@ -30,16 +38,14 @@ struct DayInfoView: View {
                 }
                 
                 Spacer()
-                    .frame(height: 180)
                 
             }
-                
-                
-            }
-        .ignoresSafeArea()
             
         }
+        
     }
+}
+
 
 struct DayInfoView_Previews: PreviewProvider {
     static var previews: some View {

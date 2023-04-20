@@ -13,11 +13,16 @@ struct NightInfoView: View {
         
         ZStack {
             Image("backgroundMain")
-                .ignoresSafeArea()
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea(.all)
             
             VStack {
-                Image ("clock")
-                    .padding(80)
+                Spacer()
+                Image("imageNight")
+                    .padding()
+                    .frame(width: 513, height: 462)
+                Spacer()
                 
                 HStack{
                     CardMainType(cardType: .night)

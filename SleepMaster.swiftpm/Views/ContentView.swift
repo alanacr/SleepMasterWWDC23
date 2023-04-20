@@ -14,7 +14,9 @@ struct ContentView: View {
         NavigationView {
             ZStack {
                 Image("backgroundMain")
-                    .ignoresSafeArea()
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .ignoresSafeArea(.all)
                 
                 VStack {
                     Text ("Hello, ")

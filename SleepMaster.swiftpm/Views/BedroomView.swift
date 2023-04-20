@@ -9,32 +9,31 @@ import SwiftUI
 
 struct BedroomView: View {
     var body: some View {
+        
         ZStack{
+            Image("bedroomVoid")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea(.all)
             
-            ZStack{
-                Image("bedroomVoid")
-                    .ignoresSafeArea()
-                VStack{
-                    CardMainType(cardType: .bedroom)
-                        .padding(.horizontal, 60)
+            VStack{
+                Spacer()
+                CardMainType(cardType: .bedroom)
+                    .padding(.horizontal, 60)
+                
+                NavigationLink (destination: BedroomGameView().navigationBarHidden(true), label: {
+                    Text("Let's go!")
+                        .font(.system(size: 24, design: .monospaced))
+                        .fontWeight(.semibold)
+                        .frame(width: 140, height: 57, alignment: .center)
+                        .padding(.horizontal, 30)
+                        .foregroundColor(.white)
+                        .background(Color(red: 0.113, green: 0.208, blue: 0.341))
+                        .cornerRadius(10)
                     
-                    NavigationLink (destination: CongratsView().navigationBarHidden(true), label: {
-                        Text("Let's go!")
-                            .font(.system(size: 24, design: .monospaced))
-                            .fontWeight(.semibold)
-                            .frame(width: 140, height: 57, alignment: .center)
-                            .padding(.horizontal, 30)
-                            .foregroundColor(.white)
-                            .background(Color(red: 0.113, green: 0.208, blue: 0.341))
-                            .cornerRadius(10)
-                        
-                    })
-                    
-                    
-                }
-                .offset(x: 10, y: 310)
+                })
             }
-            
+            .padding(80)
         }
     }
 }

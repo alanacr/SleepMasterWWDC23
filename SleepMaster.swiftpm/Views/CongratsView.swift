@@ -11,11 +11,14 @@ struct CongratsView: View {
     var body: some View {
         ZStack {
             Image("backgroundMain")
-                .ignoresSafeArea()
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea(.all)
+            
             VStack(spacing: -25) {
                 Spacer()
                 CardCongratsView(cardCongrats: "hello")
-                NavigationLink (destination: CreditsView().navigationBarHidden(true), label: {
+                NavigationLink (destination: ExtraView().navigationBarHidden(true), label: {
                     Text("Extras")
                         .font(.system(size: 24, design: .monospaced))
                         .fontWeight(.semibold)
@@ -30,7 +33,7 @@ struct CongratsView: View {
                 Image("sleepArtur")
                     .offset(x: 300)
                 
-        
+                
                 
             }
             

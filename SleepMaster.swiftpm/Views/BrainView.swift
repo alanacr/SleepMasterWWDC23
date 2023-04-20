@@ -10,10 +10,11 @@ import SwiftUI
 struct BrainView: View {
     var body: some View {
         
-        
         ZStack {
             Image("backgroundMain")
-                .ignoresSafeArea()
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea(.all)
             
             VStack {
                 Spacer()

@@ -12,12 +12,17 @@ struct CycleView: View {
         
         ZStack {
             Image("backgroundMain")
-                .ignoresSafeArea()
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .ignoresSafeArea(.all)
             
             VStack {
+                Spacer()
                 Image ("cycle")
-                    .padding(80)
-                
+                    .padding()
+                    .frame(width: 513, height: 462)
+                Spacer()
+                    
                 HStack{
                     CardMainType(cardType: .cycle)
                         .padding(.horizontal, 60)
