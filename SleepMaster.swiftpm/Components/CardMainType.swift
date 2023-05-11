@@ -24,17 +24,22 @@ struct CardMainType: View {
                 case.cycle:
                     Image("cardMain")
                     VStack {
-                        Text ("Your secret solution will be the famous")
-                            .fontWeight(.medium)
-                        +
-                        Text("Circadian Cycle!")
-                            .fontWeight(.bold)
+                        HStack {
+                            Text ("Your secret solution will be the famous ")
+                                .fontWeight(.medium)
+                            + Text("Circadian Cycle!")
+                                .fontWeight(.bold)
+                        }.frame(width: 874, height: 30)
+                            .padding(.leading, -80)
+
+
                         Text ("The major biological process that regulates physiological and behavioral activities over a period of approximately 24 hours.")
                             .fontWeight(.medium)
                             .padding(.top, 20)
-
-
-                    } .offset(x: -40)
+                            
+                            
+                    }   .frame(width: 874, height: 180, alignment: .leading)
+                        .padding(.leading, 20)
 
 
                 case.clock:
@@ -64,7 +69,7 @@ struct CardMainType: View {
 
                 case.bedroom:
                     Image("cardGame")
-                    Text ("Now that you've remembered the interference of external factors (natural and artificial) in the circadian cycle, let's change some things in Artur's room, so that he has better sleep quality.")
+                    Text ("Now that you've remembered the interference of external factors (natural and artificial) in the circadian cycle, let's change some things in Artur's room, so that he has better sleep quality. Click on the items that must be turned off.")
                         .fontWeight(.medium)
 
 
@@ -88,6 +93,6 @@ struct CardMainType: View {
 
 struct CardMainType_Previews: PreviewProvider {
     static var previews: some View {
-        CardMainType(cardType: .day)
+        CardMainType(cardType: .cycle)
     }
 }
